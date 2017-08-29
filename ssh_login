@@ -8,8 +8,8 @@
 #默认服务器配置项
 #格式："服务器名称 端口号 IP地址 登录用户名 登录密码"
 CONFIGS=(
-    "Server0 22 220.181.57.217 root baidu.com"
-    "Server1 22 66.102.251.33 root sina.com"
+    "Server120 22 10.29.0.120 ysong ysong123"
+    "Server120 22 10.29.0.120 ysong ysong123"
 )
 
 #读取自定义服务器配置文件（server_config）列表，合并服务器配置列表
@@ -42,12 +42,14 @@ function ConfigList(){
 
 #登录菜单
 function LoginMenu(){
-    if [ "$1" == "" ]; then
+#    if [ "$1" == "" ]; then
+    if [ $CONFIG_LENGTH == 1 ]; then
         AutoLogin $1
     else
         echo "Choose server from list below:"
         ConfigList
         echo "Please input the server order "
+     	ChooseServer
     fi
 }
 
@@ -98,5 +100,5 @@ if [ 1 == $# ]; then
     fi
 else
     LoginMenu 
-    ChooseServer 
+   # ChooseServer 
 fi
