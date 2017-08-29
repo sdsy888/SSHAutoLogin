@@ -2,6 +2,7 @@
 一个SSH登录服务器的shell脚本，通常我们使用ssh登录服务器都要自己输入密码，而且容易输入错误，
 每当遇到这种情况甚是苦恼，下定决心自己写一个不用输入密码自动登录ssh的shell脚本。
 ## 添加配置
+# 如果只有一个服务器，直接删除其中一行即可
 在ssh_login文件中，修改以下配置
 ```shell
     CONFIGS=(
@@ -47,7 +48,11 @@
 ```shell
  yum install expect
 ```
-2) Mac 下 安装expect
+2）Ubuntu 下 安装expect
+```
+sudo apt-get install expect
+```
+3) Mac 下 安装expect
 ```shell
  brew install homebrew/dupes/expect
 ```
