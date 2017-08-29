@@ -30,9 +30,10 @@
 ```
 2).可以将ssh_login 拷贝至 /usr/local ,之后便可以在终端中全局使用ssh_login
 ```shell
-  chmod u+x ssh_login
-  cp ssh_login /usr/local/
-  ssh_login
+  sudo chmod u+x ssh_login.sh
+  sudo chmod 777 ssh_login.sh
+  sudo cp ssh_login /usr/local/
+  ssh_login.sh
 ```
 3).命令使用
 
